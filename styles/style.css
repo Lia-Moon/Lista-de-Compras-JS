@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kay+Pho+Du:wght@400;600&display=swap');
+
+/* 
+font-family: 'Great Vibes', cursive;
+    400
+font-family: 'Kay Pho Du', serif;
+    400,600
+*/
+
+:root {
+	--cor-fundo-pagina: #F4F4F4;
+
+    --font-primaria: 'Great Vibes', cursive; /* Fonte usada no título */
+    --font-secundaria: 'Kay Pho Du', serif; /* Fonte usada nos itens da lista */
+}
+
+body { 
+    background: var(--cor-fundo-pagina);
+}
+
+.main__content { 
+    border: solid 2px rgb(54, 53, 53);
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    width: 50%;
+}
+
+.main__content--titulo--listas { 
+    font-family: var(--font-primaria);
+    font-size: 80px;
+    margin: auto;
+    width: fit-content;
+}
+
+.main__content--itens-lista {
+    font-family: var(--font-secundaria);
+}
+
+.fa-solid {
+    font-size: 30px;
+}
+
+.fa-solid:hover {
+    cursor: pointer;
+}
