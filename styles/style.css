@@ -23,24 +23,60 @@ body {
     padding: 20px;
     margin: auto;
     margin-top: 20px;
-    width: 50%;
+    width: 40%;
 }
 
 .main__content--titulo--listas { 
     font-family: var(--font-primaria);
-    font-size: 80px;
+    font-size: 4rem;
     margin: auto;
     width: fit-content;
+    margin-bottom: 20px;
 }
 
 .main__content--itens-lista {
     font-family: var(--font-secundaria);
+    font-size: 1.5rem;
 }
 
-.fa-solid {
-    font-size: 30px;
+/* Bolinha de identificação do item on hover -------------------------------------------------------------------------- */
+
+.main__content--itens-lista li .fa-regular.fa-circle, .main__content--itens-lista li .fa-solid.fa-circle{
+    margin-right: 10px;
+    font-size: 10px;
+    height: 100%;
 }
 
-.fa-solid:hover {
-    cursor: pointer;
+.main__content--itens-lista li:hover .fa-regular.fa-circle{
+    display: none;
+}
+
+.main__content--itens-lista li .fa-solid.fa-circle, .main__content--itens-lista li ~ button { /* o "~" seleciona todos os siblings que possui button*/
+    display: none;
+}
+
+.main__content--itens-lista li:hover .fa-solid.fa-circle, .main__content--itens-lista li:hover + button { /* o "+" seleciona somente o sibling adjacente*/
+    display: inline;
+}
+
+.fa-solid.fa-circle-minus {
+    font-size: 20px;
+}
+
+/* BARRA PARA INCLUSÃO DE PRODUTOS -------------------------------------------------------------------------------------- */
+.main__content--barra-inclusao { 
+    margin-top: 20px;
+}
+
+.main__content button { 
+    border: none;
+    cursor: auto;
+}
+
+.fa-solid.fa-circle-plus {
+    font-size: 20px;    
+}
+
+.fa-solid.fa-circle-plus:hover {
+    cursor: pointer;    
 }

@@ -7,14 +7,16 @@ var novoProduto = document.querySelector("#novoProduto");
 addButton.addEventListener("click", adicionarProduto);
 
 function adicionarProduto() {
-    var itemAdicionado = '<li>' + novoProduto.value + '</li>';
-    itemLista.innerHTML += itemAdicionado;
-    novoProduto.value = '';
-    novoProduto.focus();
+    if(novoProduto.value != '') {
+        var itemAdicionado = '<li> <i class="fa-regular fa-circle"></i><i class="fa-solid fa-circle"></i>' + novoProduto.value + '</li><button><i class="fa-solid fa-circle-minus"></i></button>';
+        itemLista.innerHTML += itemAdicionado;
+        novoProduto.value = '';
+        novoProduto.focus();
+    }
 }
 
 novoProduto.addEventListener('keyup', (teclaPressionada) => {
-    if(teclaPressionada.code === 'NumpadEnter' || teclaPressionada.code  === 'NumpadAdd' || teclaPressionada.code  === 'Enter') {
+    if((teclaPressionada.code === 'NumpadEnter' || teclaPressionada.code  === 'NumpadAdd' || teclaPressionada.code  === 'Enter') && novoProduto.value != '') {
         adicionarProduto();
     }
 })
