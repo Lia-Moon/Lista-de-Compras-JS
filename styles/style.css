@@ -39,6 +39,10 @@ body {
     font-size: 1.5rem;
 }
 
+.main__content--itens-lista--produto { 
+    display: grid;
+}
+
 /* Bolinha de identificação do item on hover -------------------------------------------------------------------------- */
 
 .main__content--itens-lista li .fa-regular.fa-circle, .main__content--itens-lista li .fa-solid.fa-circle{
@@ -51,16 +55,19 @@ body {
     display: none;
 }
 
-.main__content--itens-lista li .fa-solid.fa-circle, .main__content--itens-lista li ~ button { /* o "~" seleciona todos os siblings que possui button*/
+/* o "~" seleciona todos os siblings que possui button*/
+/* .main__content--itens-lista li .fa-solid.fa-circle, .main__content--itens-lista li ~ button { 
     display: none;
-}
+} */
 
-.main__content--itens-lista li:hover .fa-solid.fa-circle, .main__content--itens-lista li:hover + button { /* o "+" seleciona somente o sibling adjacente*/
+/* o "+" seleciona somente o sibling adjacente*/
+/* .main__content--itens-lista li:hover .fa-solid.fa-circle, .main__content--itens-lista li:hover + button { 
     display: inline;
-}
+} */
 
 .fa-solid.fa-circle-minus {
     font-size: 20px;
+    cursor: pointer;
 }
 
 /* BARRA PARA INCLUSÃO DE PRODUTOS -------------------------------------------------------------------------------------- */
