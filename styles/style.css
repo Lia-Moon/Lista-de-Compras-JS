@@ -37,10 +37,13 @@ body {
 .main__content--itens-lista {
     font-family: var(--font-secundaria);
     font-size: 1.5rem;
+    display: grid;
 }
+
 
 .main__content--itens-lista--produto { 
     display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 /* Bolinha de identificação do item on hover -------------------------------------------------------------------------- */
@@ -56,14 +59,15 @@ body {
 }
 
 /* o "~" seleciona todos os siblings que possui button*/
-/* .main__content--itens-lista li .fa-solid.fa-circle, .main__content--itens-lista li ~ button { 
+.main__content--itens-lista li .fa-solid.fa-circle, .main__content--itens-lista li ~ button { 
     display: none;
-} */
+}
+
 
 /* o "+" seleciona somente o sibling adjacente*/
-/* .main__content--itens-lista li:hover .fa-solid.fa-circle, .main__content--itens-lista li:hover + button { 
+.main__content--itens-lista li:hover .fa-solid.fa-circle, .main__content--itens-lista--produto:hover li + button { 
     display: inline;
-} */
+}
 
 .fa-solid.fa-circle-minus {
     font-size: 20px;
